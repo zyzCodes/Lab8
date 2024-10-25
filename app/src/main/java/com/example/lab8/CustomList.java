@@ -50,8 +50,7 @@ public class CustomList extends ArrayAdapter<City> {
      * @return
      */
     public int getCount(){
-        //not implemented
-        return 1000;
+        return cities.size();
     }
 
     /**

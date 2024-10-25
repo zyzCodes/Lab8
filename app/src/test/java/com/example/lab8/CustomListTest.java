@@ -52,15 +52,31 @@ public class CustomListTest {
     }
 
     /**
-     *
+     * Creates a city list
+     * Adds city to the list
+     * checks that hasCity returns true when input city created
      */
     @Test
     public void hasCityTest(){
         list = MockCityList();
-        int listSize = list.getCount();
         City city = new City("Estevan", "SK");
         list.addCity(city);
         assertTrue(list.hasCity(city));
+    }
+
+    /**
+     * Tests list.getCount method
+     * Creates city list, gets initial count
+     * Adds city to list and asserts that count
+     * increased by 1
+     */
+    @Test
+    public void countCityTest(){
+        list = MockCityList();
+        int listSize = list.getCount();
+        City city = new City("Estevan", "SK");
+        list.addCity(city);
+        assertEquals(list.getCount(),listSize + 1);
     }
 
 }
